@@ -1,0 +1,7 @@
+# KITTI-360 drive 0000, building masks converted to facade boxes
+path: datasets/kitti360_facade
+train: images/train
+val: images/val
+nc: 1
+names:
+  0: facade

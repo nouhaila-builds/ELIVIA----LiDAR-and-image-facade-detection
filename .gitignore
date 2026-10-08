@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environnement et secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives et jeux de données (GitHub refuse les fichiers > 100 Mo)
+*.tgz
+*.tar
+*.tar.gz
+*.7z
+data_2d_semantics.zip
+kitti360/
+nuscmini/
+yolov8n.pt
+notebooks/*.pt
+
+# Jeux YOLO générés localement (images + labels)
+datasets/**
+!datasets/README.md
+
+# Poids et journaux d'entraînement
+*.pt
+*.onnx
+*.pth
+*.engine
+models/**
+!models/README.md
+
+# Sorties locales
+results/**
+!results/.gitkeep
+logs/
+outputs/
+runs/
+*.log
+
+# Gros fichiers LiDAR / images brutes
+data/raw/**
+data/processed/**
+data/images/**
+data/videos/**
+!data/**/.gitkeep
+!data/README.md

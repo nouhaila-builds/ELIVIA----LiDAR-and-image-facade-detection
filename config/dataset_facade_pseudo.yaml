@@ -1,0 +1,7 @@
+# Pseudo-labels façades projetés depuis les plans LiDAR nuScenes
+path: datasets/facades_pseudo
+train: images/train
+val: images/val
+nc: 1
+names:
+  0: facade

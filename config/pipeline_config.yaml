@@ -1,0 +1,40 @@
+# Configuration du pipeline de détection de façades
+
+# Chemins des fichiers
+paths:
+  lidar_data: "data/raw"
+  images_data: "data/images"
+  models_dir: "models"
+  output_dir: "results"
+
+# Paramètres LiDAR
+lidar:
+  file_format: "las"  # las, laz, ply, pcd
+  voxel_size: 0.15    # Taille des voxels pour le downsampling (mètres)
+  normal_radius: 0.5  # Rayon pour le calcul des normales (mètres)
+  facade_threshold: 0.85  # Plus haut = plans plus strictement verticaux
+  min_points_per_facade: 40
+
+# Paramètres YOLO
+yolo:
+  model_path: "models/yolo_facade_kitti/weights/best.pt"
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+  image_size: 640
+  device: "cpu"  # cuda ou cpu
+
+# Paramètres de fusion
+fusion:
+  enable_fusion: true
+  calibration_file: "config/camera_calibration.yaml"
+  reprojection_error_threshold: 2.0  # pixels
+  fusion_method: "weighted_average"  # weighted_average, confidence_based
+
+# Paramètres de visualisation
+visualization:
+  point_size: 1.0
+  show_normals: false
+  save_results: true
+  output_format: "png"  # png, jpg, pdf
+
+

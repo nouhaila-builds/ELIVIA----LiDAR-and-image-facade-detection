@@ -1,0 +1,29 @@
+# Configuration du dataset pour l'entraînement YOLO - Détection de façades
+# Format YOLO (Ultralytics)
+
+# Chemin vers le dossier racine du dataset
+path: datasets/facades  # À adapter selon votre structure
+
+# Chemins relatifs (depuis 'path') vers les images
+train: images/train
+val: images/val
+test: images/test  # Optionnel
+
+# Nombre de classes
+nc: 1
+
+# Noms des classes (index 0 = facade)
+names:
+  0: facade
+
+# Exemple de structure attendue:
+# datasets/facades/
+#   ├── images/
+#   │   ├── train/    # Images d'entraînement
+#   │   ├── val/      # Images de validation
+#   │   └── test/     # Images de test (optionnel)
+#   └── labels/
+#       ├── train/    # Annotations YOLO (.txt) pour train
+#       ├── val/      # Annotations YOLO (.txt) pour val
+#       └── test/     # Annotations YOLO (.txt) pour test (optionnel)
+
